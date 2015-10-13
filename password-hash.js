@@ -12,8 +12,6 @@
 
 var crypto = require('crypto');
 
-
-
 var app = exports = module.exports = {};
 
 /*
@@ -53,7 +51,7 @@ function passwordStringToObject(password) {
 	};
 }
 
-app.hash = function createHashObj(password, options, func) {
+app.hash = function hash(password, options, func) {
 	var settings = getDefaults();
 
 	switch (typeof options) {
