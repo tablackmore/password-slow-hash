@@ -6,7 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "repository": "tablackmore/password-hash",
+  "repository": "tablackmore/password-hasher",
   "dependencies": {},
   "devDependencies": {
     "mocha": "2.2.5"
