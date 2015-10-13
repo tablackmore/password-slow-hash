@@ -14,7 +14,7 @@ $ npm install express
 ## Example
 
 ```js
-var password = require('password-slow-hash')
+var password = require('password-slow-hash');
 
 password.hash('myCrazyPassword!', function(err, generatedHash){
 	if(err) {
