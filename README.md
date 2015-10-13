@@ -20,7 +20,7 @@ password.hash('myCrazyPassword!', function(err, generatedHash){
 	if(err) {
 		throw err;
 	} else {
-		// save generatedHash to users password field in db;
+		// save generatedHash to users password field in db
 	}	
 });
 
