@@ -1,5 +1,5 @@
 var assert = require("assert");
-var password = require('../password-hash');
+var password = require('../password-slow-hash');
 
 
 var previousOutput = [{

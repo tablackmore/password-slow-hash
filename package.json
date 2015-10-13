@@ -1,12 +1,12 @@
 {
-  "name": "password-hasher",
+  "name": "password-slow-hash",
   "version": "1.0.0",
   "description": "A password hashing and salting function built on top of nodejs crypto library and sepcifically pbkdf2.",
-  "main": "password-hash.js",
+  "main": "password-slow-hash.js",
   "directories": {
     "test": "test"
   },
-  "repository": "tablackmore/password-hasher",
+  "repository": "tablackmore/password-slow-hash",
   "dependencies": {},
   "devDependencies": {
     "mocha": "2.2.5"

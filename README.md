@@ -1,4 +1,4 @@
-# password-hash
+# password-slow-hash
 
 [![Linux Build][travis-image]][travis-url]
 
@@ -6,7 +6,7 @@ Node password hashing, salting and validating methods.
 An async tool using nodes inbuilt crypto library.
 
 ```js
-var password = require('password-hash')
+var password = require('password-slow-hash')
 
 password.hash('myCrazyPassword!', function(err, generatedHash){
 	if(err) {
