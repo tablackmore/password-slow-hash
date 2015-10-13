@@ -43,11 +43,11 @@ password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 
 ### Iterations
 
-One of the most important settings is iterations. This determines how long the hash algorithm will take to create the hash. The longer time needed to create the hash the longer it will take to crack the passwords. This number should be optimised on your system so the hash generaion takes the longest time you and your users can tolerate. It should be increased as cpu speeds increase to keep your passwords safe.
+One of the most important settings is iterations. This determines how long the hash algorithm will take to create the hash. The longer time needed to create the hash the longer it will take to crack the passwords. This number should be optimised on your system so the hash generation takes the longest time you and your users can tolerate. It should be increased as cpu speeds increase to keep your passwords safe.
 
 ### Options
 
-One or more of the above defaults can be overided in an options object sent to the hash function if specific control of the hashing algorithm is required.
+One or more of the above defaults can be overridden in an options object sent to the hash function if specific control of the hashing algorithm is required.
 
 ```js
 var options = {
