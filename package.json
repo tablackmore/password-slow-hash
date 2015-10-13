@@ -4,12 +4,15 @@
   "description": "A password hashing and salting function built on top of nodejs crypto library and sepcifically pbkdf2.",
   "main": "password-hash.js",
   "directories": {
-    "test": "tests"
+    "test": "test"
   },
+
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "2.2.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "keywords": [
     "password",
