@@ -22,7 +22,7 @@ function getDefaults() {
 		algorithm: 'sha256',
 		saltByteSize: 64,
 		hashByteSize: 64,
-		iterations: 4096,
+		iterations: 25000,
 		returnType: 'string',
 		delimiter: ':'
 	};

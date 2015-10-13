@@ -39,8 +39,12 @@ password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 * algorithm: 'sha256'
 * saltByteSize: 64
 * hashByteSize: 64
-* pbkdf2 iterations: 4096
+* pbkdf2 iterations: 25000
 * returnType: 'string'
+
+### Iterations
+
+One of the most important settings is iterations. This determines how long the hash algorithm will take to create the hash. The longer time needed to create the hash the longer it will take to crack the passwords. This number should be optimised on your system so the hash generaion takes the longest time you and your users can tolerate. It should be increased as cpu speeds increase to keep your passwords safe.
 
 ### Options
 
@@ -51,7 +55,7 @@ var options = {
 	algorithm: 'sha512',
 	saltByteSize: 128,
 	hashByteSize: 128,
-	iterations: 5000,
+	iterations: 25000,
 	returnType: 'object'
 };
 
@@ -63,8 +67,6 @@ password.hash('myCrazyPassword!', options, function(err, result){
 	}	
 });
 ```
-
-
 
 [travis-image]: https://img.shields.io/travis/tablackmore/password-hash/master.svg?label=linux
 [travis-url]: https://travis-ci.org/tablackmore/password-hash
