@@ -5,8 +5,10 @@ var options = {
 	iterations: 3000,
 	algorithm: 'sha512',
 	saltByteSize: 256,
-	hashByteSize: 256
+	hashByteSize: 256,
+	returnType: 'object'
 };
+
 password.hash(test2, options, function (err, output) {
 	if (!err) {
 		console.log(output);

@@ -16,6 +16,9 @@
     "hash",
     "salt"
   ],
+  "engines": {
+    "node": ">=0.12.0"
+  },
   "author": "Tom Blackmore",
   "license": "MIT"
 }

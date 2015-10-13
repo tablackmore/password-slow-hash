@@ -12,21 +12,27 @@
 
 var crypto = require('crypto');
 
-/*
-	Defaults for hashing algorithm
-*/
-var defaults = {
-	algorithm: 'sha256',
-	saltByteSize: 64,
-	hashByteSize: 64,
-	iterations: 4096,
-	returnType: 'string',
-	delimiter: '$'
-};
+
 
 var app = exports = module.exports = {};
 
-// Compares two strings a and b in length-constant time. 
+/*
+	Defaults for hashing algorithm
+*/
+function getDefaults() {
+	return {
+		algorithm: 'sha256',
+		saltByteSize: 64,
+		hashByteSize: 64,
+		iterations: 4096,
+		returnType: 'string',
+		delimiter: ':'
+	};
+}
+
+/*
+	 Compares two strings a and b in length-constant time. 
+*/
 function slowEquals(a, b) {
 	var diff = a.length ^ b.length;
 	for (var i = 0; i < a.length && i < b.length; i++) {
@@ -36,7 +42,7 @@ function slowEquals(a, b) {
 }
 
 function passwordStringToObject(password) {
-	var passComponents = password.split(defaults.delimiter);
+	var passComponents = password.split(getDefaults().delimiter);
 	return {
 		hash: passComponents[3],
 		salt: passComponents[2],
@@ -48,8 +54,7 @@ function passwordStringToObject(password) {
 }
 
 app.hash = function createHashObj(password, options, func) {
-	// clone the defaults to settings
-	var settings = JSON.parse(JSON.stringify(defaults));
+	var settings = getDefaults();
 
 	switch (typeof options) {
 	case 'function':
@@ -73,9 +78,7 @@ app.hash = function createHashObj(password, options, func) {
 				if (ex) {
 					func(ex);
 				} else {
-					if (settings.returnType === 'string') {
-						result = settings.algorithm + defaults.delimiter + settings.iterations + defaults.delimiter + salt.toString('hex') + defaults.delimiter + key.toString('hex');
-					} else {
+					if (settings.returnType === 'object') {
 						result = {
 							pbkdf2: {
 								iterations: settings.iterations,
@@ -84,6 +87,8 @@ app.hash = function createHashObj(password, options, func) {
 							salt: salt.toString('hex'),
 							hash: key.toString('hex')
 						};
+					} else {
+						result = settings.algorithm + settings.delimiter + settings.iterations + settings.delimiter + salt.toString('hex') + settings.delimiter + key.toString('hex');
 					}
 					func(err, result);
 				}
