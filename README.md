@@ -29,7 +29,7 @@ password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 
 ### Features
 
-* Utilises nodes inbuilt pbkdf2 functionality for slowing down generation
+* Utilises nodes inbuilt pbkdf2 functionality for slowing down hash generation
 * Cryptographically random salting
 * Slow equals password validation
 
@@ -58,7 +58,7 @@ var options = {
 	returnType: 'object'
 };
 
-password.hash('myCrazyPassword!', options, function(err, result){
+password.hash('my|Cr4zy$PÅssword!', options, function(err, result){
 	if(err) {
 		throw err;
 	} else {
