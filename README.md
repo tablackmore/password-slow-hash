@@ -8,15 +8,15 @@ An async tool using nodes inbuilt crypto library.
 ```js
 var password = require('password-hash')
 
-password.hash('myCrazyPassword!', function(err, result){
+password.hash('myCrazyPassword!', function(err, generatedHash){
 	if(err) {
 		throw err;
 	} else {
-		// save result to users password field in db;
+		// save generatedHash to users password field in db;
 	}	
 });
 
-password.valdiate('myCrazyPassword!', oldHash, function(err, isValid){
+password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 	if(err) {
 		throw err;
 	} else if(isValid){
@@ -30,7 +30,7 @@ password.valdiate('myCrazyPassword!', oldHash, function(err, isValid){
 ### Features
 
 * Utilises nodes inbuilt pbkdf2 functionality
-* Random salting
+* Cryptographically random salting
 * Robust password protection
 * Slow equals password validation
 
