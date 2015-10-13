@@ -66,11 +66,11 @@ var options = {
 	returnType: 'object'
 };
 
-password.hash('my|Cr4zy$PÅssword!', options, function(err, result){
+password.hash('my|Cr4zy$PÅssword!', options, function(err, generatedHash){
 	if(err) {
 		throw err;
 	} else {
-		// save result to users password field in db;
+		// save generatedHash to users password field in db
 	}	
 });
 ```
