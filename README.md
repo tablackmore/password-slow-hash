@@ -29,9 +29,8 @@ password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 
 ### Features
 
-* Utilises nodes inbuilt pbkdf2 functionality
+* Utilises nodes inbuilt pbkdf2 functionality for slowing down generation
 * Cryptographically random salting
-* Robust password protection
 * Slow equals password validation
 
 ### Defaults
@@ -55,7 +54,7 @@ var options = {
 	algorithm: 'sha512',
 	saltByteSize: 128,
 	hashByteSize: 128,
-	iterations: 25000,
+	iterations: 35000,
 	returnType: 'object'
 };
 
