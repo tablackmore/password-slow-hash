@@ -5,6 +5,14 @@
 Node password hashing, salting and validating methods. 
 An async tool using nodes inbuilt crypto library.
 
+## Installation
+
+```bash
+$ npm install express
+```
+
+## Example
+
 ```js
 var password = require('password-slow-hash')
 
