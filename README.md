@@ -36,8 +36,8 @@ password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 ### Defaults
 
 * algorithm: 'sha256'
-* saltByteSize: 64
-* hashByteSize: 64
+* saltByteSize: 32
+* hashByteSize: 32
 * pbkdf2 iterations: 25000
 * returnType: 'string'
 
@@ -52,8 +52,8 @@ One or more of the above defaults can be overridden in an options object sent to
 ```js
 var options = {
 	algorithm: 'sha512',
-	saltByteSize: 128,
-	hashByteSize: 128,
+	saltByteSize: 64,
+	hashByteSize: 64,
 	iterations: 35000,
 	returnType: 'object'
 };

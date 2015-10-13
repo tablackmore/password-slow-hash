@@ -20,8 +20,8 @@ var app = exports = module.exports = {};
 function getDefaults() {
 	return {
 		algorithm: 'sha256',
-		saltByteSize: 64,
-		hashByteSize: 64,
+		saltByteSize: 32,
+		hashByteSize: 32,
 		iterations: 25000,
 		returnType: 'string',
 		delimiter: ':'
