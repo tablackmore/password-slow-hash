@@ -75,5 +75,18 @@ password.hash('my|Cr4zy$PÅssword!', options, function(err, result){
 });
 ```
 
+## Tests
+
+  To run the test suite, first install the dependencies, then run `npm test`:
+
+```bash
+$ npm install
+$ npm test
+```
+
+## License
+
+  [MIT](LICENSE)
+
 [travis-image]: https://img.shields.io/travis/tablackmore/password-hash/master.svg?label=linux
 [travis-url]: https://travis-ci.org/tablackmore/password-hash
