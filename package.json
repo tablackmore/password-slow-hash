@@ -1,0 +1,21 @@
+{
+  "name": "password-hash",
+  "version": "1.0.0",
+  "description": "A password hashing and salting function built on top of nodejs crypto library and sepcifically pbkdf2.",
+  "main": "password-hash.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "password",
+    "hash",
+    "salt"
+  ],
+  "author": "Tom Blackmore",
+  "license": "MIT"
+}
