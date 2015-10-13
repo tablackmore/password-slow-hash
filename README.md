@@ -8,7 +8,7 @@ An async tool using nodes inbuilt crypto library.
 ## Installation
 
 ```bash
-$ npm install express
+$ npm install password-slow-hash
 ```
 
 ## Example

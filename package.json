@@ -1,6 +1,6 @@
 {
   "name": "password-slow-hash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A password hashing and salting function built on top of nodejs crypto library and sepcifically pbkdf2.",
   "main": "password-slow-hash.js",
   "directories": {
