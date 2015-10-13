@@ -1,7 +1,6 @@
 var assert = require("assert");
 var password = require('../password-slow-hash');
 
-
 var previousOutput = [{
 	hash: 'sha256:4096:e833bfe42d38ef65447dc6c04314acf4264e78b677509f3a57612ab0a7c2ac4d8f1a5e95c3ef534500691603966d0d914ceb8a86d9d263e6eb412ca520521dcf:50f867f8574487bee799f2c962fa8532e87755d9001ad715f4023ca0b4ea83aadda1e1d8291d60d973388be8a04f5a0efc1af2cb13f32a4bbfa89908139f71f9',
 	password: 'Rg3248-!arTz#4~&'
@@ -32,9 +31,9 @@ describe('password-hash', function () {
 			password.hash('test', done);
 		});
 		it('should not return the same hash for the same password', function (done) {
-			password.hash('test', function (err, result) {
+			password.hash('my|Cr4zy$PÅssword!', function (err, result) {
 				if (err) throw err;
-				password.hash('test', function (err, result2) {
+				password.hash('my|Cr4zy$PÅssword!', function (err, result2) {
 					if (err) throw err;
 					assert.notEqual(result, result2);
 					done();
