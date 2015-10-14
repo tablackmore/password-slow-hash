@@ -1,6 +1,6 @@
 # password-slow-hash
 
-###Note [scrypt](https://github.com/barrysteyn/node-scrypt) is more secure than this module as it increases memory and processor usage. 
+### Note [scrypt](https://github.com/barrysteyn/node-scrypt) is more secure than this module as it increases memory and processor usage. 
 
 [![Linux Build][travis-image]][travis-url]
 
