@@ -1,9 +1,11 @@
 # password-slow-hash
 
+Note [scrypt](https://github.com/barrysteyn/node-scrypt) is more secure than this module as it increases memory and processor usage. 
+
 [![Linux Build][travis-image]][travis-url]
 
 Node password hashing, salting and validating methods. 
-An async tool using nodes inbuilt crypto library.
+An async tool using nodes inbuilt crypto library, pbkdf2.
 
 ## Installation
 
