@@ -26,7 +26,7 @@ password.hash('myCrazyPassword!', function(err, generatedHash){
 	}	
 });
 
-password.valdiate('myCrazyPassword!', usersSavedHash, function(err, isValid){
+password.validate('myCrazyPassword!', usersSavedHash, function(err, isValid){
 	if(err) {
 		throw err;
 	} else if(isValid){
