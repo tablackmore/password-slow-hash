@@ -89,6 +89,6 @@ $ npm test
 ## License
 
   [MIT](LICENSE)
-
+  
 [travis-image]: https://img.shields.io/travis/tablackmore/password-hash/master.svg?label=linux
 [travis-url]: https://travis-ci.org/tablackmore/password-slow-hash
