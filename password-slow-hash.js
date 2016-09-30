@@ -29,7 +29,7 @@ function getDefaults() {
 }
 
 /*
-	 Compares two strings a and b in length-constant time. 
+	 Compares two strings a and b in length-constant time.
 */
 function slowEquals(a, b) {
 	var diff = a.length ^ b.length;
@@ -73,8 +73,8 @@ app.hash = function hash(password, options, func) {
 		} else {
 			crypto.pbkdf2(password, salt, settings.iterations, settings.hashByteSize, settings.algorithm, function (err, key) {
 				var result;
-				if (ex) {
-					func(ex);
+				if (err) {
+					func(err);
 				} else {
 					if (settings.returnType === 'object') {
 						result = {
